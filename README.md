@@ -14,7 +14,7 @@ Python 2.7 or 3.5
 pip for installing modules
 first clone the repository and run the following command in the terminal
 
-git clone https://github.com/amardeep-programmer/Process-Visualization.git
+git clone https://github.com/amardeep-programmer/network-prober.git
 pip install -r requirements.txt
 
 
