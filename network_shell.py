@@ -1,5 +1,7 @@
 import sh as bada 
+import sys
 from colorama import Fore, Back,Style
+
 
 
 print """
@@ -35,6 +37,9 @@ print (Fore.GREEN+"enter nmcli see which connection is active on your computer: 
 
 print (Fore.GREEN+"enter scan see the device information of your network card ")
 
+print (Fore.GREEN+"enter public to see your public ip address ")
+
+
 
 while True :
 
@@ -68,12 +73,23 @@ while True :
 
 	elif option == "scan" :
 
-		print (Fore.YELLOW+"to find Geeky information about your network card !!!!!!!<<<<<!!!!!!!!!")
+		print (Fore.YELLOW+"to find Geeky information about your network card please wait few seconds  !!!!!!!<<<<<!!!!!!!!!")
 		print bada.iwlist.scan()
+
+	elif option == "public" :
+
+		print (Fore.YELLOW+"Finding your public ip address please wait.......")
+
+		print bada.curl("ifconfig.co")
 
 	else :
 
-		print " wrong input !!!"
+		print (Fore.BLUE+"wrong input try again...")
+
+		sys.exit()
+
+
+
 
 
 
